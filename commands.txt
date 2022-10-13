@@ -23,8 +23,5 @@ MINING
 12. eth.accounts
 13. miner.setEtherbase(eth.accounts[0])
 14. miner.start(1) {mining gets started}
-15. 
-
-
-
-
+15. eth.getBalance(eth.accounts[0]){checks balance}
+--the balance keeps getting updated and increased as the miner gets rewarded for mining--
