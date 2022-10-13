@@ -1,0 +1,30 @@
+install geth 
+On one command prompt, the geth should be running to keep the connection with the blockchain 
+
+1. geth attach ipc://./pipe/geth.ipc
+2. personal.newaccount()  {creates new account}
+3. Enter password  
+After this a file gets created in C:/Users/user/AppData/Local/Ethereum/'keystore'
+4. eth.syncing {gives info about the synced data}
+
+ON VSCODE
+5. create genesis.json 
+In TERMINAL
+6. geth init .\genesis.json -datadir Eth {private network gets established and a folder 'eth' gets created}
+7. geth --datadir .\Eth\ --nodiscover
+{nodiscover because our blockchain is private and 
+we dont want the blockchain to look for external peers}
+
+MINING
+8. Split terminal in VSCODE and geth attach ipc://./pipe/geth.ipc
+9. eth.accounts
+10. personal.newAccount()
+11. password
+12. eth.accounts
+13. miner.setEtherbase(eth.accounts[0])
+14. miner.start(1) {mining gets started}
+15. 
+
+
+
+
